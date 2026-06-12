@@ -138,6 +138,10 @@ def import_csv():
     conn.close()
     return jsonify({"imported": count})
 
+@app.route("/")
+def index():
+    return render_template_string(HTML)
+
 HTML = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
